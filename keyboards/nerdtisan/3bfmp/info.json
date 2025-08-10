@@ -1,0 +1,23 @@
+{
+    "keyboard_name": "3 Button Foot Macro Pad",
+    "manufacturer": "Nerdtisan",
+    "url": "www.nerdtisan.com",
+    "maintainer": "adrian",
+    "usb": {
+        "vid": "0x7810",
+        "pid": "0x0001",
+        "device_version": "0.0.1",    
+    },
+    "bootmagic": {
+        "matrix": [0, 3]
+    },
+    "features": {
+        "bootmagic": true,
+        "extrakey": true,
+        "mousekey": true,
+        "nkro": false,
+        "encoder": true
+    },
+    
+    }
+}
