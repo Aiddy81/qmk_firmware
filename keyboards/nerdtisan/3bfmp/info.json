@@ -1,23 +1,52 @@
 {
     "keyboard_name": "3 Button Foot Macro Pad",
     "manufacturer": "Nerdtisan",
-    "url": "www.nerdtisan.com",
+    "url": "https://www.nerdtisan.com",
     "maintainer": "adrian",
+    "processor": "RP2040",
     "usb": {
         "vid": "0x7810",
         "pid": "0x0001",
-        "device_version": "0.0.1",    
+        "device_version": "0.0.1"   
     },
-    "bootmagic": {
-        "matrix": [0, 3]
-    },
+    "matrix_size": {
+    "rows": 1,
+    "cols": 3
+  },
     "features": {
         "bootmagic": true,
         "extrakey": true,
         "mousekey": true,
         "nkro": false,
-        "encoder": true
+        "encoder": false
     },
-    
+    //"encoder": {
+      //  "driver": "custom"
+  //},
+  "layouts": {
+    "LAYOUT_footpad": {
+      "layout": [
+        {
+          "label": "Middle Click",
+          "x": 0,
+          "y": 0,
+          "matrix": [0, 0]
+        },
+        {
+          "label": "Left Click",
+          "x": 1,
+          "y": 0,
+          "matrix": [0, 1]
+        },
+        {
+          "label": "Right Click",
+          "x": 2,
+          "y": 0,
+          "matrix": [0, 2]
+        }
+      ]
     }
+  }
 }
+
+
