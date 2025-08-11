@@ -1,7 +1,0 @@
-BOOTLOADER = rp2040
-BOOTMAGIC_ENABLE = yes
-MOUSEKEY_ENABLE = yes
-EXTRAKEY_ENABLE = yes       # Required for media keys
-CONSOLE_ENABLE = no
-COMMAND_ENABLE = no
-NKRO_ENABLE = no
