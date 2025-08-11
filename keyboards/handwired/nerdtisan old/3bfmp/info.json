@@ -24,7 +24,7 @@
       //  "driver": "custom"
   //},
   "layouts": {
-    "LAYOUT_footpad": {
+    "LAYOUT_1x3": {
       "layout": [
         {
           "label": "Middle Click",

@@ -1,0 +1,27 @@
+{
+    "manufacturer": "Nerdtisan",
+    "keyboard_name": "3bmp",
+    "maintainer": "adrian",
+    "development_board": "promicro_rp2040",
+    "diode_direction": "COL2ROW",
+    "matrix_pins": {
+        "direct": [
+            ["F1", "E6", "B0"]
+        ]
+    },
+    "url": "https://www.nerdtisan.com",
+    "usb": {
+        "vid": "0x7810",
+        "pid": "0x0001",
+        "device_version": "0.0.1" 
+    },
+    "layouts": {
+        "LAYOUT": {
+            "layout": [
+                {"matrix": [0, 0], "x": 0, "y": 0},
+                {"matrix": [0, 1], "x": 1, "y": 0},
+                {"matrix": [0, 2], "x": 2, "y": 0}
+            ]
+        }
+    }
+}

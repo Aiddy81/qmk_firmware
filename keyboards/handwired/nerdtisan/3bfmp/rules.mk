@@ -1,0 +1,9 @@
+#VIA_ENABLE = yes
+LTO_ENABLE = yes
+BOOTMAGIC_ENABLE = no
+MOUSEKEY_ENABLE = yes
+EXTRAKEY_ENABLE = yes       # Required for media keys
+#CONSOLE_ENABLE = no
+#COMMAND_ENABLE = no
+NKRO_ENABLE = no
+

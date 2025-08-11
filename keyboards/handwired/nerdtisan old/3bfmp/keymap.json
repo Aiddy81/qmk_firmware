@@ -1,0 +1,10 @@
+{
+  "keyboard": "nerdtisan/3bfmp",
+  "keymap": "default",
+  "layout": "LAYOUT_1x3",
+  "layers": [
+    [
+      "MS_BTN3", "MS_BTN1", "MS_BTN2"
+    ]
+  ]
+}
