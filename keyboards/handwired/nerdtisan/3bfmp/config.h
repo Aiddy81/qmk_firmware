@@ -29,11 +29,12 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 /* Key matrix size */
 #define MATRIX_ROWS 1
-#define MATRIX_COLS 3
+#define MATRIX_COLS 4
 
 /* Pin mapping — change to match your wiring */
-#define MATRIX_ROW_PINS { GP26 }
-#define MATRIX_COL_PINS { GP27, GP28, GP29 }
+//#define MATRIX_ROW_PINS { GP26 }
+//#define MATRIX_COL_PINS { GP27, GP28, GP29 }
+#define DIRECT_PINS { { GP26, GP27, GP28, GP29 } }
 
 /* Diode direction */
 //#define DIODE_DIRECTION COL2ROW

@@ -6,4 +6,6 @@ EXTRAKEY_ENABLE = yes       # Required for media keys
 #CONSOLE_ENABLE = no
 #COMMAND_ENABLE = no
 NKRO_ENABLE = no
-
+# Bootloader selection
+BOOTLOADER = rp2040
+ANALOG_DRIVER_REQUIRED = yes

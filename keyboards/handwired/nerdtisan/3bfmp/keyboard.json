@@ -6,7 +6,7 @@
     "diode_direction": "COL2ROW",
     "matrix_pins": {
         "direct": [
-            ["F1", "E6", "B0"]
+            ["GP26", "GP27", "GP28", "GP29"]
         ]
     },
     "url": "https://www.nerdtisan.com",
@@ -20,7 +20,8 @@
             "layout": [
                 {"matrix": [0, 0], "x": 0, "y": 0},
                 {"matrix": [0, 1], "x": 1, "y": 0},
-                {"matrix": [0, 2], "x": 4, "y": 0}
+                {"matrix": [0, 2], "x": 4, "y": 0},
+                {"matrix": [0, 3], "x": 5, "y": 0}
             ]
         }
     }
