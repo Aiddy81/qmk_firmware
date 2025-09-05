@@ -37,7 +37,6 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 #define DIRECT_PINS { { GP26, GP27, GP28, GP29 } }
 
 /* Diode direction */
-//#define DIODE_DIRECTION COL2ROW
-
+//#define DIODE_4
 /* Debounce time in ms */
 //#define DEBOUNCE 5
