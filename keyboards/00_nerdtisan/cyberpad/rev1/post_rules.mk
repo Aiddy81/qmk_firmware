@@ -1,0 +1,14 @@
+#Copyright 2025 Adrian Cafarella <qmk@nerdtisan.com>
+
+ifeq ($(filter $(strip $(RGBLED_OPTION_TYPE))x, nonex backlightx underglowx x),)
+   $(error unknown RGBLED_OPTION_TYPE value "$(RGBLED_OPTION_TYPE)")
+endif
+
+ifeq ($(strip $(RGBLED_OPTION_TYPE)),backlight)
+  RGBLIGHT_ENABLE = yes
+  OPT_DEFS += -DRGBLIGHT_LED_COUNT=30
+endif
+ifeq ($(strip $(RGBLED_OPTION_TYPE)),underglow)
+  RGBLIGHT_ENABLE = yes
+  OPT_DEFS += -DRGBLIGHT_LED_COUNT=6
+endif
