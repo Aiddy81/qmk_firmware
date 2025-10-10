@@ -9,7 +9,7 @@
         "pid": "0x0002",
         "device_version": "0.0.1" 
     },
-        "features": {
+       "features": {
         "bootmagic": true,
         "mousekey": true,
         "extrakey": true,
@@ -22,8 +22,8 @@
     },
     "encoder": {
         "rotary": [
-            {"pin_a": "GP9", "pin_b": "GP10"},
-            {"pin_a": "GP13", "pin_b": "GP12"}
+            {"pin_a": "GP9", "pin_b": "GP10", "resolution": 4},
+            {"pin_a": "GP13", "pin_b": "GP12", "resolution": 4}
         ]
     },
     "ws2812": {
@@ -33,7 +33,7 @@
     "rgb_matrix": {
         "driver": "ws2812",
         "led_count": 9,
-        "max_brightness": 128,
+        "max_brightness": 150,
         "animations": {
             "solid_color": true,
             "breathing": true,
@@ -59,20 +59,21 @@
     "diode_direction": "COL2ROW",
     "processor": "RP2040",
     "bootloader": "rp2040",
+    "board": "GENERIC_RP_RP2040",
     "layouts": {
         "LAYOUT": {
             "layout": [
-                {"matrix": [0, 0], "x": 0, "y": 0},
-                {"matrix": [1, 0], "x": 0, "y": 1},
-                {"matrix": [2, 0], "x": 0, "y": 2},
-                {"matrix": [2, 1], "x": 1, "y": 2},
-                {"matrix": [2, 2], "x": 2, "y": 2},
-                {"matrix": [3, 0], "x": 0, "y": 3},
-                {"matrix": [3, 1], "x": 1, "y": 3},
-                {"matrix": [3, 2], "x": 2, "y": 3},
-                {"matrix": [4, 0], "x": 0, "y": 4},
-                {"matrix": [4, 1], "x": 1, "y": 4},
-                {"matrix": [4, 2], "x": 2, "y": 4}
+                {"matrix": [3, 0], "x": 0, "y": 0, "encoder": 0},
+                {"matrix": [4, 0], "x": 0, "y": 1, "encoder": 1},
+                {"matrix": [0, 0], "x": 0, "y": 2},
+                {"matrix": [0, 1], "x": 1, "y": 2},
+                {"matrix": [0, 2], "x": 2, "y": 2},
+                {"matrix": [1, 0], "x": 0, "y": 3},
+                {"matrix": [1, 1], "x": 1, "y": 3},
+                {"matrix": [1, 2], "x": 2, "y": 3},
+                {"matrix": [2, 0], "x": 0, "y": 4},
+                {"matrix": [2, 1], "x": 1, "y": 4},
+                {"matrix": [2, 2], "x": 2, "y": 4}
             ]
         }
     }
