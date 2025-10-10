@@ -6,9 +6,9 @@ endif
 
 ifeq ($(strip $(RGBLED_OPTION_TYPE)),backlight)
   RGBLIGHT_ENABLE = yes
-  OPT_DEFS += -DRGBLIGHT_LED_COUNT=30
+  OPT_DEFS += -DRGBLIGHT_LED_COUNT=9
 endif
 ifeq ($(strip $(RGBLED_OPTION_TYPE)),underglow)
   RGBLIGHT_ENABLE = yes
-  OPT_DEFS += -DRGBLIGHT_LED_COUNT=6
+  OPT_DEFS += -DRGBLIGHT_LED_COUNT=9
 endif

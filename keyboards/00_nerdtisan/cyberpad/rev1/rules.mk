@@ -1,31 +1,52 @@
 #Copyright 2025 Adrian Cafarella <qmk@nerdtisan.com>
 BOARD = GENERIC_RP_RP2040
 MCU = RP2040
+BOOTLOADER = rp2040
 
-LTO_ENABLE = yes
-BOOTMAGIC_ENABLE = yes
-MOUSEKEY_ENABLE = yes
-EXTRAKEY_ENABLE = yes       # Required for media keys
+#LTO_ENABLE = yes
+#BOOTMAGIC_ENABLE = yes
+#MOUSEKEY_ENABLE = yes
+#EXTRAKEY_ENABLE = yes       # Required for media keys
 #CONSOLE_ENABLE = no
 #COMMAND_ENABLE = no
-NKRO_ENABLE = no
+#NKRO_ENABLE = yes
 # Bootloader selection
-BOOTLOADER = rp2040
+
 #ANALOG_DRIVER_REQUIRED = yes
-ENCODER_ENABLE = yes
-RGBLIGHT_ENABLE = yes    # Enable RGB lighting
-RGBLED_OPTION_TYPE = backlight
-WPM_ENABLE = yes
+#ENCODER_ENABLE = yes
+#RGBLIGHT_ENABLE = yes    # Enable RGB lighting
+#RGBLED_OPTION_TYPE = backlight
+#WPM_ENABLE = yes
 
-OLED_ENABLE = yes
+#OLED_ENABLE = yes
 #oled_driver = yes
-OLED_FONT_H = "keyboards/00_nerdtisan/cyberpad/lib/glcdfont.c"
+#OLED_FONT_H = "keyboards/00_nerdtisan/cyberpad/lib/glcdfont.c"
 #OLED_DRIVER = ssd1306
-WS2812_DRIVER = vendor
-WS2812_DI_PIN = GP8
-RGBLIGHT_LED_COUNT = 9 # Number of LEDs
-I2C_DRIVER_REQUIRED = yes
+#WS2812_DRIVER = vendor
+#WS2812_DI_PIN = GP8
+#RGBLIGHT_LED_COUNT = 9 # Number of LEDs
+#I2C_DRIVER_REQUIRED = yes
 
-MCUCONF = keyboards/00_nerdtisan/cyberpad/rev1/mcuconf.h
+#MCUCONF = keyboards/00_nerdtisan/cyberpad/rev1/mcuconf.h
+
+# Build Options
+BOOTMAGIC_ENABLE = yes      # Enable Bootmagic Lite
+MOUSEKEY_ENABLE = yes       # Mouse keys
+EXTRAKEY_ENABLE = yes       # Audio control and System control
+CONSOLE_ENABLE = no         # Console for debug
+COMMAND_ENABLE = no         # Commands for debug and configuration
+NKRO_ENABLE = yes           # Enable N-Key Rollover
+BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality
+RGBLIGHT_ENABLE = no        # Enable keyboard RGB underglow
+RGB_MATRIX_ENABLE = yes     # Enable RGB Matrix
+RGB_MATRIX_DRIVER = ws2812  # RGB Matrix driver
+AUDIO_ENABLE = no           # Audio output
+ENCODER_ENABLE = yes        # Enable rotary encoder support
+ENCODER_MAP_ENABLE = yes    # Enable encoder map feature
+OLED_ENABLE = yes           # Enable OLED display
+OLED_DRIVER = ssd1306       # OLED driver
+
+# VIA support
+VIA_ENABLE = yes
 
 

@@ -1,32 +1,79 @@
 {
     "manufacturer": "Nerdtisan",
-    "keyboard_name": "cyberpad",
+    "keyboard_name": "Cyberpad",
     "maintainer": "adrian",
     "development_board": "promicro_rp2040",
-    "diode_direction": "COL2ROW",
     "url": "https://www.nerdtisan.com",
     "usb": {
         "vid": "0x7810",
         "pid": "0x0002",
         "device_version": "0.0.1" 
     },
-    "matrix": {
-        "rows": 3,
-        "cols": 3
+        "features": {
+        "bootmagic": true,
+        "mousekey": true,
+        "extrakey": true,
+        "console": false,
+        "command": false,
+        "nkro": true,
+        "rgb_matrix": true,
+        "encoder": true,
+        "oled": true
     },
+    "encoder": {
+        "rotary": [
+            {"pin_a": "GP9", "pin_b": "GP10"},
+            {"pin_a": "GP13", "pin_b": "GP12"}
+        ]
+    },
+    "ws2812": {
+        "pin": "GP8",
+        "driver": "vendor"
+    },
+    "rgb_matrix": {
+        "driver": "ws2812",
+        "led_count": 9,
+        "max_brightness": 128,
+        "animations": {
+            "solid_color": true,
+            "breathing": true,
+            "cycle_all": true,
+            "rainbow_moving_chevron": true
+        },
+        "layout": [
+            {"x": 0, "y": 48, "flags": 4},
+            {"x": 112, "y": 48, "flags": 4},
+            {"x": 224, "y": 48, "flags": 4},
+            {"x": 0, "y": 32, "flags": 4},
+            {"x": 112, "y": 32, "flags": 4},
+            {"x": 224, "y": 32, "flags": 4},
+            {"x": 0, "y": 16, "flags": 4},
+            {"x": 112, "y": 16, "flags": 4},
+            {"x": 224, "y": 16, "flags": 4}
+        ]
+    },
+    "matrix_pins": {
+        "cols": ["GP4", "GP3", "GP2"],
+        "rows": ["GP7", "GP6", "GP5", "GP11", "GP14"]
+    },
+    "diode_direction": "COL2ROW",
+    "processor": "RP2040",
+    "bootloader": "rp2040",
     "layouts": {
         "LAYOUT": {
             "layout": [
-                { "matrix": [0, 0], "x": 0, "y": 0 },
-                { "matrix": [0, 1], "x": 1, "y": 0 },
-                { "matrix": [0, 2], "x": 2, "y": 0 },
-                { "matrix": [1, 0], "x": 0, "y": 1 },
-                { "matrix": [1, 1], "x": 1, "y": 1 },
-                { "matrix": [1, 2], "x": 2, "y": 1 },
-                { "matrix": [2, 0], "x": 0, "y": 2 },
-                { "matrix": [2, 1], "x": 1, "y": 2 },
-                { "matrix": [2, 2], "x": 2, "y": 2 }
-]
+                {"matrix": [0, 0], "x": 0, "y": 0},
+                {"matrix": [1, 0], "x": 0, "y": 1},
+                {"matrix": [2, 0], "x": 0, "y": 2},
+                {"matrix": [2, 1], "x": 1, "y": 2},
+                {"matrix": [2, 2], "x": 2, "y": 2},
+                {"matrix": [3, 0], "x": 0, "y": 3},
+                {"matrix": [3, 1], "x": 1, "y": 3},
+                {"matrix": [3, 2], "x": 2, "y": 3},
+                {"matrix": [4, 0], "x": 0, "y": 4},
+                {"matrix": [4, 1], "x": 1, "y": 4},
+                {"matrix": [4, 2], "x": 2, "y": 4}
+            ]
         }
     }
 }
