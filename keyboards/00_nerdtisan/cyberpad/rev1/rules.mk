@@ -3,6 +3,11 @@ BOARD = GENERIC_RP_RP2040
 MCU = RP2040
 BOOTLOADER = rp2040
 
+
+# Custom matrix implementation for encoder buttons
+CUSTOM_MATRIX = lite
+SRC += matrix.c
+
 #LTO_ENABLE = yes
 #BOOTMAGIC_ENABLE = yes
 #MOUSEKEY_ENABLE = yes
