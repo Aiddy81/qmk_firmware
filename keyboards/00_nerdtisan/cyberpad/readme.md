@@ -16,7 +16,7 @@ A compact 11-key macropad featuring 2 rotary encoders, RGB matrix lighting, and 
 - **128x64 OLED Display**: Shows current layer, key mappings, and animated screensaver
 - **4 Programmable Layers**: Easily switch between different key configurations
 - **VIA Compatible**: Real-time remapping without reflashing firmware
-- **Asteroid Game Screensaver**: Autonomous animated screensaver after 10 seconds of inactivity
+- **Space Invaders Screensaver**: Classic arcade game animation after 10 seconds of inactivity
 
 ## Layout
 
@@ -68,9 +68,12 @@ Displays real-time information:
 
 ### Screensaver Mode
 After 10 seconds of inactivity:
-- Animated asteroid field (6 asteroids)
-- Autonomous flying ship
-- Bouncing physics with random direction changes
+- Classic Space Invaders game animation
+- 12 invaders in 3 rows (W, M, V characters) marching back and forth
+- Auto-firing ship (A) at the bottom tracking and shooting invaders
+- Bullets (|) automatically fire and destroy invaders on contact
+- Invaders drop down when hitting edges (classic arcade behavior)
+- Game resets when all invaders destroyed or they reach the bottom
 - Any key press, encoder rotation, or button click exits screensaver
 
 ## Building the Firmware
@@ -117,14 +120,20 @@ The firmware includes a custom `KC_CLAY` keycode for layer cycling. You can add 
 2. Implementing behavior in `process_record_user()`
 3. Adding display names in `get_key_name()` for OLED support
 
+**Note**: Custom keycodes must be defined in `keymap.c` to appear on the OLED.
+**Note 2**: In VIA to assign custom keycode KC_CLAY, use `CUSTOM(64)`.
+
 ### Modifying the Screensaver
 
-The asteroid game can be customized in `keymap.c`:
+The Space Invaders game can be customized in `keymap.c`:
 
 - `IDLE_TIMEOUT`: Time before screensaver starts (default: 10000ms)
-- `GAME_UPDATE_INTERVAL`: Animation speed (default: 50ms)
-- Asteroid count, speed, and starting positions
-- Ship behavior and movement patterns
+- `GAME_UPDATE_INTERVAL`: Invader movement speed (default: 200ms)
+- `BULLET_UPDATE_INTERVAL`: Bullet speed (default: 30ms)
+- `FIRE_INTERVAL`: Auto-fire rate (default: 800ms)
+- `NUM_INVADERS`: Number of invaders (default: 12)
+- Invader formations, speeds, and starting positions
+- Ship AI behavior and tracking algorithm
 
 ### RGB Effects
 
@@ -159,6 +168,10 @@ Access RGB controls via Layer 1:
 - [VIA Documentation](https://www.caniusevia.com/docs/specification)
 - [Nerdtisan Website](https://www.nerdtisan.com)
 - [QMK Discord](https://discord.gg/qmk)
+- [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) 
+- [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) 
+- [Complete Newbs Guide](https://docs.qmk.fm/#/newbs)
+
 
 ## License
 
@@ -168,20 +181,6 @@ This project follows QMK's GPL-2.0-or-later license.
 
 **Made with ❤️ by the mechanical keyboard community**
 
-Make example for this keyboard (after setting up your build environment):
 
-    make nerdtisan:default
 
-Flashing example for this keyboard:
 
-    make nerdtisan:default:flash
-
-See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start with our [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).
-
-## Bootloader
-
-Enter the bootloader in 3 ways:
-
-* **Bootmagic reset**: Hold down the key at (0,0) in the matrix (usually the top left key or Escape) and plug in the keyboard
-* **Physical reset button**: Briefly press the button on the back of the PCB - some may have pads you must short instead
-* **Keycode in layout**: Press the key mapped to `QK_BOOT` if it is available
