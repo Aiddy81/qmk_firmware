@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: GPL-2.0-or-later
 #include QMK_KEYBOARD_H
 
 #ifdef VIA_ENABLE
@@ -115,74 +116,6 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
 #endif
 
 
-
-// RGB Matrix per-layer colors
-/*
-bool rgb_matrix_indicators_user(void) {
-    // Function called when layer state changes
-    // Get the highest active layer
-    uint8_t highest_layer = get_highest_layer(state);
-    switch(get_highest_layer(layer_state)) {
-        case _BASE:
-            // Layer 0 - Blue theme
-            rgb_matrix_set_color_all(0, 100, 255);
-            break;
-        case _FN1:
-            // Layer 1 - Green theme
-            rgb_matrix_set_color_all(0, 255, 100);
-            break;
-        case _FN2:
-            // Layer 2 - Red theme
-            rgb_matrix_set_color_all(255, 50, 0);
-            break;
-        case _FN3:
-            // Layer 3 - Purple theme
-            rgb_matrix_set_color_all(200, 0, 255);
-            break;
-    }
-    return false;
-}
-*/
-/*
-layer_state_t layer_state_set_user(layer_state_t state) {
-    switch (get_highest_layer(state)) {
-    case _BASE:
-        rgblight_sethsv (0x00,  0x00, 0xFF);
-        break;
-    case _FN1:
-        rgblight_sethsv (0xFF,  0x00, 0x00);
-        break;
-    case _FN2:
-        rgblight_sethsv (0x00,  0xFF, 0x00);
-        break;
-    case _FN3:
-        rgblight_sethsv (0x7A,  0x00, 0xFF);
-        break;
-    default: //  for any other layers, or the default layer
-        rgblight_sethsv (0x00,  0xFF, 0xFF);
-        break;
-    }
-  return state;
-}
-*/
-/*
-static void render_logo(void) {
-    static const char PROGMEM qmk_logo[] = {
-        0x80, 0x81, 0x82, 0x83, 0x84, 0x85, 0x86, 0x87, 0x88, 0x89, 0x8A, 0x8B, 0x8C, 0x8D, 0x8E, 0x8F, 0x90, 0x91, 0x92, 0x93, 0x94,
-        0xA0, 0xA1, 0xA2, 0xA3, 0xA4, 0xA5, 0xA6, 0xA7, 0xA8, 0xA9, 0xAA, 0xAB, 0xAC, 0xAD, 0xAE, 0xAF, 0xB0, 0xB1, 0xB2, 0xB3, 0xB4,
-        0xC0, 0xC1, 0xC2, 0xC3, 0xC4, 0xC5, 0xC6, 0xC7, 0xC8, 0xC9, 0xCA, 0xCB, 0xCC, 0xCD, 0xCE, 0xCF, 0xD0, 0xD1, 0xD2, 0xD3, 0xD4, 0x00
-    };
-
-    oled_write_P(qmk_logo, false);
-    //oled_delay(1000); // Display for 1 second
-    //oled_clear_line();
-}
-
-bool oled_task_user(void) {
-    render_logo();
-    return false;
-}
-*/
 
 #if defined(DIP_SWITCH_MAP_ENABLE)
 const uint16_t PROGMEM dip_switch_map[NUM_DIP_SWITCHES][NUM_DIP_STATES] = {
