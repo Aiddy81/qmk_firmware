@@ -225,7 +225,7 @@ static uint32_t last_game_update = 0;
 static uint32_t last_bullet_update = 0;
 static uint32_t last_fire_time = 0;
 
-#define IDLE_TIMEOUT 1200000  // 10 seconds of no input = screensaver
+#define IDLE_TIMEOUT 10000  // 10 seconds of no input = screensaver
 #define GAME_UPDATE_INTERVAL 200  // Update invaders every 200ms
 #define BULLET_UPDATE_INTERVAL 30  // Update bullet every 30ms (faster)
 #define FIRE_INTERVAL 800  // Fire every 800ms
